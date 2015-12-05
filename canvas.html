@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>smartCanvas</title>
+	<meta charset="UTF-8"></meta>
+	<style>
+		input{
+			display: block;
+		}
+		canvas{
+		    border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+<!-- <div style = "width: 200px;height:200px;"></div>
+<div style = "width: 200px;height:200px;"></div> -->
+<canvas id="smartCanvas" width="700" height="500" ></canvas>
+<input class="img" value="a.png" />在这里写图片地址
+<p>图片状态:</p>
+<p id='state' style="dispaly:block;color:#aaa">尚未加载成功</p>
+或本地选择<input type="file" class="select" />
+<br/>
+Hue色相 -180~180<input class="h" value="0" />
+Saturation饱和度 -100~100<input class="s" value="0" />
+Lightness明度 -100~100<input class="l" value="0" />
+<button id = "start">点击应用变更</button>
+<script type="text/javascript" src="./canvas.js"></script>
+<script type="text/javascript" src="./smartHSL.js"></script>
+</body>
+</html>
