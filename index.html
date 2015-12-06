@@ -19,6 +19,7 @@
         background-color: #272727;
         height: 30px;
         line-height: 30px;
+        margin: 0px auto 0px auto;
       }
       canvas{
           border: 1px solid #ccc;
@@ -46,7 +47,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">martHSL</h1>
+      <h1 class="project-name">smartHSL</h1>
       <h2 class="project-tagline">canvas库, 根据HSL颜色空间快速调整图片</h2>
       <a href="https://github.com/Ahkari/smartHSL" class="btn">View on GitHub</a>
       <a href="https://github.com/Ahkari/smartHSL/zipball/master" class="btn">Download .zip</a>
@@ -55,7 +56,7 @@
 
     <section class="main-content">
 <canvas id="smartCanvas" width="700" height="500" ></canvas>
-<input class="img" value="a.png" />在这里写图片地址
+<input class="img" />在这里写图片地址
 <p>图片状态:</p>
 <p id='state' style="dispaly:block;color:#aaa">尚未加载成功</p>
 或本地选择<input type="file" class="select" />
@@ -73,7 +74,7 @@ Lightness明度 -100~100<input class="l" value="0" />
 
     </section>
 
-  <script type="text/javascript" src="./canvas.js"></script>
   <script type="text/javascript" src="./smartHSL.js"></script>
+  <script type="text/javascript" src="./canvas.js"></script>
   </body>
 </html>

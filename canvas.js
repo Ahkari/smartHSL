@@ -78,6 +78,8 @@ select.addEventListener('click',function(){
 });
 
 window.onload = function () {
+	canvasImg.src = 'a.png' ;
+	img.value = 'a.png' ;
     img.focus();
 };
 
