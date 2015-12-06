@@ -12,6 +12,15 @@ var canvas = document.querySelector('#smartCanvas') ,
 
 var state = false;
 var canvasImg = new Image() ;
+
+var tmpImg1 = new Image() ,
+	tmpImg2 = new Image() ,
+	tmpImg3 = new Image() ;
+ 
+tmpImg1.src = 'l.jpg' ;
+tmpImg2.src = 'li.jpg' ;
+tmpImg3.src = 'a.jpg' ;
+
 canvasImg.onload = function(e){
 	var context = canvas.getContext('2d') ;
 	state = true ; 
@@ -78,8 +87,8 @@ select.addEventListener('click',function(){
 });
 
 window.onload = function () {
-	canvasImg.src = 'a.png' ;
-	img.value = 'a.png' ;
+	canvasImg.src = 'a.jpg' ;
+	img.value = 'a.jpg' ;
     img.focus();
 };
 
