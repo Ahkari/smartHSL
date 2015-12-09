@@ -25,7 +25,7 @@ SmartHSL.prototype = {
 	//API 其二 : 接受H, S , L其中的任意一个参数 
 	H : function(){
 		var h = parseInt( arguments[0] ) ;
-		if ( h === NaN ){
+		if ( isNaN( h ) ){
 			return ;
 		}
 		this.Hue = h ;
@@ -33,18 +33,18 @@ SmartHSL.prototype = {
 	},
 	S : function(){
 		var s = parseInt( arguments[0] ) ;
-		if ( s === NaN ){
+		if ( isNaN( s ) ){
 			return ;
 		}
 		this.Saturation = s ;
 		this.setHSL( this.Hue , this,Saturation ,this.Lightness ) ;
 	},
 	L : function(){
-		var L = parseInt( arguments[0] );
-		if ( L === NaN ){
+		var l = parseInt( arguments[0] );
+		if ( isNaN( l ) ){
 			return ;
 		}
-		this.Lightness = h ;
+		this.Lightness = l ;
 		this.setHSL( this.Hue , this.Saturation , this.Lightness ) ;
 	},
 	//API 其三 : 重置canvas
@@ -206,15 +206,7 @@ SmartHSL.prototype = {
 		lOpe = (parseInt(options[2])+100)/200 ;
 
 		function hAdapt(old,ope){
-			var newH ;
-			if ( ope === 180 ){
-				newH = old ;
-			}else if ( ope < 180 ){
-				newH = old*ope/180 ;
-			}else if ( ope > 180 ){
-				newH = 2*old + 2*ope - (ope*old/180) - 360 ;
-			}
-			return newH ;
+			return old+ope-180 ;
 		} 
 		function sAdapt(old,ope){
 			var newS ; 
